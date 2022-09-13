@@ -1,0 +1,26 @@
+﻿@using Shop.Models;
+@model IEnumerable<Product>;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Товары</h1>
+            <table border="1" bordercolor="grey">
+                <tr><th>Название продукта</th><th>Описание продукта</th><th>Категория продукта</th></tr>
+                @{
+                    foreach (var product in Model)
+                    {
+                        <tr><td>@product.Name</td><td>@product.Description</td><td>@product.ProductNameCategory</td></tr>
+                    }
+                 }
+            </table>
+    </body>
+</html>
